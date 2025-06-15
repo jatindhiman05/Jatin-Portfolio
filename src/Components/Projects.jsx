@@ -12,6 +12,7 @@ import Project7Image from '../images/Book.png';
 import Project8Image from '../images/Book.png';
 
 const projectList = [
+
     {
         name: "BlogApp",
         image: BlogImage,
@@ -19,55 +20,40 @@ const projectList = [
         tags: ["React", "Node.js", "MongoDB"],
         githubLink: "https://github.com/yourusername/blogapp"
     },
-    // {
-    //     name: "ColorPro",
-    //     image: ColorImage,
-    //     description: "Advanced color palette generator with CSS export functionality",
-    //     tags: ["JavaScript", "CSS3", "HTML5"],
-    //     githubLink: "https://github.com/yourusername/colorpro"
-    // },
-    // {
-    //     name: "SortVisualizer",
-    //     image: SortImage,
-    //     description: "Interactive visualization tool for sorting algorithms",
-    //     tags: ["React", "D3.js", "Algorithms"],
-    //     githubLink: "https://github.com/yourusername/sort-visualizer"
-    // },
-    // {
-    //     name: "Joystore",
-    //     image: JoyImage,
-    //     description: "E-commerce platform for gaming accessories",
-    //     tags: ["Next.js", "Stripe", "Tailwind CSS"],
-    //     githubLink: "https://github.com/yourusername/joystore"
-    // },
-    // {
-    //     name: "OSAlgorithmSimulator",
-    //     image: OSImage,
-    //     description: "Operating system algorithm simulation tool",
-    //     tags: ["Python", "PyQt", "Algorithms"],
-    //     githubLink: "https://github.com/yourusername/os-simulator"
-    // },
-    // {
-    //     name: "BookItup",
-    //     image: BookImage,
-    //     description: "Library management system with recommendation engine",
-    //     tags: ["Django", "Python", "PostgreSQL"],
-    //     githubLink: "https://github.com/yourusername/bookitup"
-    // },
-    // {
-    //     name: "TaskMaster",
-    //     image: Project7Image,
-    //     description: "Productivity app with gamified task completion",
-    //     tags: ["React Native", "Firebase", "Redux"],
-    //     githubLink: "https://github.com/yourusername/taskmaster"
-    // },
-    // {
-    //     name: "WeatherWise",
-    //     image: Project8Image,
-    //     description: "Real-time weather forecasting application",
-    //     tags: ["TypeScript", "React", "Weather API"],
-    //     githubLink: "https://github.com/yourusername/weatherwise"
-    // },
+    {
+        name: "ColorPro",
+        image: ColorImage,
+        description: "Advanced color palette generator with CSS export functionality",
+        tags: ["JavaScript", "CSS3", "HTML5"],
+        githubLink: "https://github.com/jatindhiman05/Color-Shades"
+    },
+    {
+        name: "Joystore",
+        image: JoyImage,
+        description: "Modern e-commerce store with state management, optimized fetching, and dynamic UI using Swiper and Toastify.",
+        tags: ['React', 'Redux Toolkit', 'React Query', 'Axios', 'Tailwind CSS'],
+        githubLink: 'https://github.com/jatindhiman05/Joystore'
+    },
+    {
+        name: "SortVisualizer",
+        image: SortImage,
+        description: "Interactive tool to visualize various sorting algorithms with real-time animations.",
+        tags: ['p5.js', 'Sorting', 'Animation', 'HTML5', 'CSS3'],
+        githubLink: "https://github.com/jatindh05/Sort-Visualizer/"
+    },
+    {
+        name: "OSAlgorithmSimulator",
+        image: OSImage,
+        description: "Simulator for core OS algorithms like Scheduling, Paging, Deadlock, and File Handling with C++.",
+        tags: ['C++', 'OOP', 'Data Structures', 'File Handling'],
+        githubLink: "https://github.com/jatindhiman05/Operating-System"
+    },{
+        name: "BookItup",
+        image: BookImage,
+        description: "A book searching application.",
+        tags: ["React", "Node.js"],
+        githubLink: "https://github.com/jatindhiman05/BookItUp"
+    }
 ];
 
 const Projects = ({ darkMode }) => {
@@ -129,8 +115,8 @@ const Projects = ({ darkMode }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`inline-flex items-center px-6 py-2 rounded-lg font-medium transition-all ${darkMode
-                            ? 'bg-gray-700 hover:bg-gray-600 text-white'
-                            : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
+                        ? 'bg-gray-700 hover:bg-gray-600 text-white'
+                        : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
                         } shadow hover:shadow-md`}
                 >
                     Visit My GitHub

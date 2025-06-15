@@ -37,9 +37,9 @@ const Home = ({ darkMode }) => {
                     {/* Social Links */}
                     <div className="flex space-x-4">
                         {[
-                            { href: "https://github.com/DevanshSahni", Icon: FaGithub, label: "GitHub" },
-                            { href: "https://linkedin.com/in/devansh-sahni", Icon: FaLinkedin, label: "LinkedIn" },
-                            { href: "mailto:devanshsahni@gmail.com", Icon: FaEnvelope, label: "Email" }
+                            { href: "https://github.com/jatindhiman05", Icon: FaGithub, label: "GitHub" },
+                            { href: "https://linkedin.com/in/jatindhiman05", Icon: FaLinkedin, label: "LinkedIn" },
+                            { href: "mailto:jatin121dhiman@gmail.com", Icon: FaEnvelope, label: "Email" }
                         ].map(({ href, Icon, label }) => (
                             <a
                                 key={label}

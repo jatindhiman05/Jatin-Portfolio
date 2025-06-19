@@ -2,55 +2,16 @@ import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { FiFolder } from 'react-icons/fi';
 
-// Optional: Move outside for performance
-const projectData = {
-    BlogApp: {
-        desc: 'Full-stack blogging platform with JWT auth, role-based access, Cloudinary integration, and rich user features.',
-        github: 'https://github.com/jatindhiman05/Blog-App',
-        website: 'https://bloggin-all-day.onrender.com/',
-        tags: ['MERN', 'JWT', 'Tailwind', 'Redux Toolkit', 'Cloudinary', 'Nodemailer']
-    },
-    ColorPro: {
-        desc: 'Color exploration tool with image-based color extraction using React Colour Thief and Firebase auth.',
-        github: 'https://github.com/jatindhiman05/Color-Shades',
-        website: 'https://colorr-shades.netlify.app/',
-        tags: ['ReactJS', 'Redux Toolkit', 'Firebase', 'Color Thief']
-    },
-    Joystore: {
-        desc: 'Modern e-commerce store with state management, optimized fetching, and dynamic UI using Swiper and Toastify.',
-        github: 'https://github.com/jatindhiman05/Joystore',
-        website: 'https://joystorre.netlify.app',
-        tags: ['React', 'Redux Toolkit', 'React Query', 'Axios', 'Tailwind CSS']
-    },
-    OSAlgorithmSimulator: {
-        desc: 'Simulator for core OS algorithms like Scheduling, Paging, Deadlock, and File Handling with C++.',
-        github: 'https://github.com/jatindhiman05/Operating-System',
-        tags: ['C++', 'OOP', 'Data Structures', 'File Handling']
-    },
-    SortVisualizer: {
-        desc: 'Interactive tool to visualize various sorting algorithms with real-time animations.',
-        github: 'https://github.com/jatindh05/Sort-Visualizer/',
-        website: 'https://sorttizer.netlify.app/',
-        tags: ['p5.js', 'Sorting', 'Animation', 'HTML5', 'CSS3']
-    },
-    BookItup: {
-        desc: 'Interactive tool to visualize various sorting algorithms with real-time animations.',
-        github: 'https://github.com/jatindhiman05/BookItUp',
-        website: 'https://book-itup.netlify.app/',
-        tags: ['React', 'Redux Toolkit', 'React Query', 'Axios', 'Tailwind CSS']
-    },
-};
-
-
-const ProjectBox = ({ projectPhoto, projectName, darkMode, className = '' }) => {
-    const data = projectData[projectName];
-
-    if (!data) {
-        return <div className="text-center text-red-500">Project data not found</div>;
-    }
-
-    const { desc, github, website, tags } = data;
-
+const ProjectBox = ({
+    projectPhoto,
+    projectName,
+    desc,
+    github,
+    website,
+    tags,
+    darkMode,
+    className = ''
+}) => {
     return (
         <article className={`group h-full rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg ${darkMode ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'} ${className}`}>
             {/* Image */}
@@ -78,14 +39,16 @@ const ProjectBox = ({ projectPhoto, projectName, darkMode, className = '' }) => 
                                 <FaGithub />
                             </a>
                         )}
-                        <a
-                            href={website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`p-1.5 rounded-full ${darkMode ? 'text-gray-400 hover:text-blue-400 hover:bg-gray-700' : 'text-gray-500 hover:text-blue-600 hover:bg-gray-100'} transition-colors`}
-                        >
-                            <FaExternalLinkAlt />
-                        </a>
+                        {website && (
+                            <a
+                                href={website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`p-1.5 rounded-full ${darkMode ? 'text-gray-400 hover:text-blue-400 hover:bg-gray-700' : 'text-gray-500 hover:text-blue-600 hover:bg-gray-100'} transition-colors`}
+                            >
+                                <FaExternalLinkAlt />
+                            </a>
+                        )}
                     </div>
                 </div>
 
@@ -131,7 +94,6 @@ const ProjectBox = ({ projectPhoto, projectName, darkMode, className = '' }) => 
                             Demo
                         </a>
                     )}
-
                 </div>
             </div>
         </article>
